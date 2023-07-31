@@ -1,4 +1,3 @@
-#be mindful of the lower/uppercase jargon that a user might type , account for it all the time
 import os
 print("Welcome to the Oppenheimer Simulation Game! Based on the bestselling movie adaptation by Christopher Nolan!")
 print("NOTE: Make sure all your responses are in terms of Y or N ONLY for the game to work as intended! Thank you for your cooperation!")
