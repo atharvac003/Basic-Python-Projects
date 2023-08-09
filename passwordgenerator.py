@@ -29,6 +29,15 @@ for p in range(len(final_lst)-1, 0, -1):
    # Swap the current index element with the element at a random index so if p and q match they remain at the same index unaltered
    final_lst[p], final_lst[q] = final_lst[q], final_lst[p]
 
-print(f"A possible password is: {''.join(final_lst)}")
+#this is a nice way of printing out each character of a list without any spaces, it conisders an empty string and keeps adding elements of
+#the shuffled list to the string and then prints the entire concatenated string without any spaces in it
 
-#for printing the final list we can also easily use the random.shuffle command and then joining command
+final_password= ""
+for eachcharacter in final_lst:
+  final_password+=eachcharacter
+
+print(f"A possible password is: {final_password}")
+
+#print(f"A possible password is: {''.join(final_lst)}")
+
+#for printing the final list we can also easily use the random.shuffle command and then join list command as seen commented out above
