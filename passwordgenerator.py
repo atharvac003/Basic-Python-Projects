@@ -30,3 +30,5 @@ for p in range(len(final_lst)-1, 0, -1):
    final_lst[p], final_lst[q] = final_lst[q], final_lst[p]
 
 print(f"A possible password is: {''.join(final_lst)}")
+
+#for printing the final list we can also easily use the random.shuffle command and then joining command
