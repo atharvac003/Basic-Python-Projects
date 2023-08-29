@@ -1,1 +1,49 @@
 
+import random
+from hangmanwords import word_list
+from hangmanart import logo,stages
+
+print(logo)
+
+random_index=int(random.randint(0,len(word_list)-1))
+
+random_word_as_string=word_list[random_index]
+
+print(f"\n\nPsst, the word is {random_word_as_string}")
+
+count=0
+for i in range(0,len(random_word_as_string)):
+  count+=1
+
+length_of_chosen_word=int(count)
+count_of_blanks=False
+
+
+display=[]
+for i in range(0,length_of_chosen_word):
+     display+="_"
+  
+index=7
+while not count_of_blanks:
+ guess=input("\nGuess a letter: ").lower()
+
+ if guess in display:
+      print(f"\nYou already guessed {guess}. Try another letter!")
+   
+ for i in range(0,length_of_chosen_word):
+   
+   if guess==random_word_as_string[i]:
+      display[i]=guess
+ print(f"\n{display}")
+  
+ if guess not in display:
+    index-=1
+    print(f"\n\n{guess} is not in the word. You lose a life!")
+    print(f"{stages[index]}")
+    if index==0:
+       print("You lose!")
+       count_of_blanks=True
+    
+ if "_" not in display:
+    count_of_blanks=True
+    print("\nYou win!")
