@@ -1,5 +1,6 @@
 
 import random
+from replit import clear
 from hangmanwords import word_list
 from hangmanart import logo,stages
 
@@ -26,7 +27,7 @@ for i in range(0,length_of_chosen_word):
 index=7
 while not count_of_blanks:
  guess=input("\nGuess a letter: ").lower()
-
+ clear()
  if guess in display:
       print(f"\nYou already guessed {guess}. Try another letter!")
    
