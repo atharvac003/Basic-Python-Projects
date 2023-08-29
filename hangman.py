@@ -10,7 +10,6 @@ random_index=int(random.randint(0,len(word_list)-1))
 
 random_word_as_string=word_list[random_index]
 
-print(f"\n\nPsst, the word is {random_word_as_string}")
 
 count=0
 for i in range(0,len(random_word_as_string)):
@@ -43,6 +42,7 @@ while not count_of_blanks:
     print(f"{stages[index]}")
     if index==0:
        print("You lose!")
+       print(f"\nThe correct word is {random_word_as_string}")
        count_of_blanks=True
     
  if "_" not in display:
